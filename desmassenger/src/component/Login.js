@@ -51,8 +51,8 @@ function SignInUpForm() {
             <button className="btn" id="signUp" onClick={handleSignUp}>Sign Up</button>
           </div>
         </div>
-      </div>    
-     </div>
+      </div>
+    </div>
   );
 }
 export default SignInUpForm;
