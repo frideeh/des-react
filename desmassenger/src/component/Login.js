@@ -55,5 +55,4 @@ function SignInUpForm() {
     </div>
   );
 }
-
 export default SignInUpForm;
