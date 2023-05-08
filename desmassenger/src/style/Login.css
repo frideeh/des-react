@@ -422,6 +422,8 @@ body {
 	width: 100%;
 }
 
+/* Animation of login form */
+
 @keyframes show {
 	0%,
 	49.99% {
