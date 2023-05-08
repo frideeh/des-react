@@ -17,6 +17,7 @@ function SignInUpForm() {
     e.preventDefault();
   };
 
+
   return (
     
     <div className={`container ${isRightPanelActive ? 'right-panel-active' : ''}`}>
@@ -56,4 +57,6 @@ function SignInUpForm() {
     </div>
   );
 }
+
 export default SignInUpForm;
+
