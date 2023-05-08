@@ -1,21 +1,28 @@
 import '../style/Login.css';
+import * as API from '../API/ApiFunctions'
 
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 function SignInUpForm() {
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
+  const [UserName , setUserName] = useState('')
+  const [Password , setPassword] = useState('')
+  const [Email , setEmail] = useState('')
 
   const handleSignIn = () => {
     setIsRightPanelActive(false);
   };
 
   const handleSignUp = () => {
+    API.createRoom(UserName)
     setIsRightPanelActive(true);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
 
 
   return (
@@ -25,9 +32,27 @@ function SignInUpForm() {
       <div className="container__form container--signup">
         <form action="#" className="form" id="form1" onSubmit={handleSubmit}>
           <h2 className="form__title">Sign Up</h2>
-          <input type="text" placeholder="User" className="input" />
-          <input type="email" placeholder="Email" className="input" />
-          <input type="password" placeholder="Password" className="input" />
+          <input 
+          type="text" 
+          placeholder="User Name" 
+          className="input" 
+          onChange={(e) => setUserName(e.target.value)}
+          maxLength={22}
+          />
+          <input 
+          type="email" 
+          placeholder="Email" 
+          className="input"
+          onChange={(e) => setEmail(e.target.value)}
+          maxLength={22}
+          />
+          <input 
+          type="password" 
+          placeholder="Password"
+          className="input"
+          onChange={(e) => setPassword(e.target.value)}
+          maxLength={22}
+          />
           <button className="btn">Sign Up</button>
         </form>
       </div>
