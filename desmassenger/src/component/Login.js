@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 function SignInUpForm() {
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
+
   const handleSignIn = () => {
     setIsRightPanelActive(false);
   };
@@ -15,7 +16,8 @@ function SignInUpForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  
+
+
   return (
     
     <div className={`container ${isRightPanelActive ? 'right-panel-active' : ''}`}>
@@ -55,4 +57,6 @@ function SignInUpForm() {
     </div>
   );
 }
+
 export default SignInUpForm;
+
