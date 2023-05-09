@@ -1,8 +1,7 @@
 import '../style/Login.css';
 import * as API from '../API/ApiFunctions'
-
-
 import React, { useEffect, useState } from 'react';
+
 
 function SignInUpForm() {
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
